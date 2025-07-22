@@ -1,0 +1,26 @@
+<div class="bg-gray-50 py-10 px-2 md:px-0">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Glimpses of how it looks</h2>
+    <div class="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+      <!-- Large main image -->
+      <div class="md:row-span-2 md:col-span-2 relative group">
+        <img [src]="gallery[0].image" [alt]="gallery[0].title" class="w-full h-72 md:h-full object-cover rounded-lg" />
+        <div class="absolute inset-0 bg-black/20 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+          <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16" fill="white"/></svg>
+        </div>
+      </div>
+      <!-- Small images -->
+      <ng-container *ngFor="let item of visibleGallery.slice(1, 5); let i = index">
+        <div class="relative group h-36 md:h-44">
+          <img [src]="item.image" [alt]="item.title" class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-black/20 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16" fill="white"/></svg>
+          </div>
+          <div *ngIf="item.label" class="absolute left-2 bottom-2 text-white font-semibold text-sm drop-shadow-lg whitespace-pre-line">{{ item.label }}</div>
+          <div *ngIf="extraCount && i === 3" class="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center text-white text-2xl font-bold">+{{ extraCount }}</div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

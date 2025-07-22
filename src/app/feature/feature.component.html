@@ -1,0 +1,49 @@
+<div class="bg-gray-50  px-2 m-auto p-12 md:px-0">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Plan and Personalise</h2>
+    <div class="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <!-- Features List -->
+      <div class="space-y-5">
+        <div *ngFor="let f of features" class="flex items-start bg-white rounded-lg shadow p-5 gap-4">
+          <div [innerHTML]="f.icon"></div>
+          <div>
+            <div class="font-bold text-lg">{{ f.title }}</div>
+            <div class="text-gray-600 text-sm mt-1">{{ f.description }}</div>
+          </div>
+        </div>
+      </div>
+      <!-- Image -->
+      <div>
+        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Plan and Personalise" class="rounded-lg shadow w-full object-cover h-80 md:h-96" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- What makes our experiences different section -->
+<div class="bg-white  m-auto py-10 px-2 md:px-0">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">What makes our experiences different?</h2>
+    <div class="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <!-- Image -->
+      <div class="ml-5">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Unique Experience" class="rounded-lg shadow w-full object-cover h-80 md:h-96" />
+      </div>
+      <!-- Differences List -->
+      <div class="space-y-5">
+        <div *ngFor="let d of differences" class="flex items-start bg-white rounded-lg shadow p-5 gap-4">
+          <div [innerHTML]="d.icon"></div>
+          <div>
+            <div class="font-bold text-lg">{{ d.title }}</div>
+            <div class="text-gray-600 text-sm mt-1">{{ d.description }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center mt-10">
+      <button class="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-8 py-2 rounded transition">Enquire Now</button>
+    </div>
+  </div>
+</div>
