@@ -6,7 +6,7 @@
       <!-- Features List -->
       <div class="space-y-5">
         <div *ngFor="let f of features" class="flex items-start bg-white rounded-lg shadow p-5 gap-4">
-          <div [innerHTML]="f.icon"></div>
+          
           <div>
             <div class="font-bold text-lg">{{ f.title }}</div>
             <div class="text-gray-600 text-sm mt-1">{{ f.description }}</div>
@@ -34,7 +34,7 @@
       <!-- Differences List -->
       <div class="space-y-5">
         <div *ngFor="let d of differences" class="flex items-start bg-white rounded-lg shadow p-5 gap-4">
-          <div [innerHTML]="d.icon"></div>
+          
           <div>
             <div class="font-bold text-lg">{{ d.title }}</div>
             <div class="text-gray-600 text-sm mt-1">{{ d.description }}</div>
